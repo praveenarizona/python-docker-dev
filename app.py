@@ -4,8 +4,7 @@ import psycopg2
 import os
 
 app = Flask(__name__)
-password = os.environ['POSTGRES_PASSWORD']
-
+password = os.environ.get('POSTGRES_PASSWORD')
 
 @app.route('/')
 def hello_world():
